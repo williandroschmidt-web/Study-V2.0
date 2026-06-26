@@ -364,3 +364,601 @@ nav a:hover::after{
     box-shadow:var(--shadow);
 
 }
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    width:100%;
+
+    min-height:calc(100vh - 85px);
+
+    padding:80px 7%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   TEXTO
+=========================== */
+
+.hero-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.tag{
+
+    width:max-content;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    font-size:.95rem;
+
+}
+
+.hero h2{
+
+    font-size:clamp(2.8rem,5vw,4.6rem);
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    color:var(--text);
+
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:var(--text-light);
+
+    max-width:620px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:15px;
+
+}
+
+/* ==========================================================
+   IMAGEM
+========================================================== */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* Brilho de fundo */
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(59,130,246,.30),
+        transparent 70%
+    );
+
+    filter:blur(20px);
+
+    z-index:0;
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+.phone{
+
+    width:320px;
+
+    height:650px;
+
+    background:#111827;
+
+    border-radius:40px;
+
+    padding:14px;
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.20);
+
+    position:relative;
+
+    animation:float 5s ease-in-out infinite;
+
+    z-index:2;
+
+}
+
+/* Notch */
+
+.phone::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:120px;
+
+    height:22px;
+
+    background:#0b0b0b;
+
+    border-radius:20px;
+
+}
+
+.phone-screen{
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        180deg,
+        #eff6ff,
+        #dbeafe
+    );
+
+    border-radius:28px;
+
+    padding:30px 22px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.status{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:30px;
+
+}
+
+.circle{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.blue{
+
+    background:#3B82F6;
+
+}
+
+.green{
+
+    background:#10B981;
+
+}
+
+.yellow{
+
+    background:#FACC15;
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.fake-card{
+
+    width:100%;
+
+    background:rgba(255,255,255,.70);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+
+        0 10px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.fake-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.fake-card h3{
+
+    font-size:1.15rem;
+
+    margin-bottom:8px;
+
+    color:#111827;
+
+}
+
+.fake-card p{
+
+    font-size:.95rem;
+
+    color:#4B5563;
+
+}
+
+/* ==========================================================
+   ELEMENTOS DECORATIVOS
+========================================================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    left:-120px;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(37,99,235,.10);
+
+    border-radius:50%;
+
+    filter:blur(50px);
+
+    z-index:-1;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-150px;
+
+    bottom:-150px;
+
+    width:420px;
+
+    height:420px;
+
+    background:rgba(16,185,129,.10);
+
+    border-radius:50%;
+
+    filter:blur(60px);
+
+    z-index:-1;
+
+}
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.features{
+
+    width:100%;
+
+    padding:90px 7%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:all .35s ease;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    right:-80px;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(37,99,235,.08);
+
+    border-radius:50%;
+
+    transition:.4s;
+
+}
+
+.card:hover::before{
+
+    transform:scale(1.4);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+}
+
+.card span{
+
+    font-size:54px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    display:inline-block;
+
+}
+
+.card h3{
+
+    font-size:1.35rem;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-top:1px solid var(--border);
+
+    color:var(--text-light);
+
+    background:var(--surface);
+
+}
+
+/* ==========================================================
+   UTILITÁRIOS
+========================================================== */
+
+.container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.section-title{
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    max-width:700px;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================================
+   SELEÇÃO DE TEXTO
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--background);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-light);
+
+}
